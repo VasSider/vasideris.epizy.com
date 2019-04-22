@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Sideris Vasilis</title>
+<meta name="description" content="Portofolio of Sideris Vasilis">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1" charset='utf-8'>
+</head>
+<body>
+
+<div class="header">
+  <h1>Sideris Vasilis</h1>
+  <h2><i>Electrical & Computer Engineer</i></h2>
+</div>
+<div class="pop-msg" id="msg-cont">Messege send!</div>
+<div class="container">
+		<div class="row">
+                         <div class="col-left">
+                                 <div class="aside">
+                                      <img class="avatar" src="images/face.jpg" alt="Face of Sideris Vasilis with an awkward smile!"></img>
+                                      
+                                      <ul>
+                                      <li>
+                                      <a href="https://github.com/VasSider/" target="_blank">
+                                      <img class="icons" src="images/github.png" alt="Github black icon"></img>
+                                      </a>
+                                      </li>
+                                      <li>
+                                      <a href="https://www.kaggle.com/sidba20" target="_blank">
+                                      <img class="icons" src="images/kaggle.png" alt="kaggle blue icon"></img>
+                                      </a>
+                                      </li>
+                                      <li>
+                                      <a href="mailto:sideresvasilis@gmail.com">
+                                      <img class="icons" src="images/gmail.png" alt="Gmail red envelope icon"></img>
+                                      </a>
+                                      </li>                                      
+                                 </div>
+                          </div>
+			<div class="col-right">
+				<div class="main">
+					<section class="pill-nav">
+						<input type="button" id="about-me" value="About me">
+						<input type="button" id="resume" value="Resume">
+						<input type="button" id="contact" value="Contact me">
+					  
+					  <div id="txt-about-me"> <p><h3><font color="orange">Hey there!</font> I' m Vasilis. <p>I am an Electrical and Computer Engineer, passionate with <a href="https://en.wikipedia.org/wiki/Data_science" target="_blank">Data Science</a> and <a href="https://en.wikipedia.org/wiki/Bioinformatics" target="_blank">Bioinformatics</a>. <p>I graduated from the <a href="https://www.ece.ntua.gr/en" target="_blank">School of Electrical and Computer Engineering</a> at the National Technical University of Athens. I'm very thankful to Professor Evangelos Christoforou, Ph.D. Candidate Maria Revythi and the whole laboratory team for their guidance which have been proven to be a necessity in fulfilling my research <a href="https://dspace.lib.ntua.gr/handle/123456789/48398" target="_blank">thesis</a>. <p>For as long as I can remember myself, I was fascinated with the technological advancements and got inspired to enter the world of Computer Science, with the aim of helping to contribute to technological achievements.<p>I really enjoy competing in chess tourneys ♔, playing the piano 🎹, composing classical music 🎼 and "procrastinate" watching documentaries 📺 about Physics and Math! </p></p></p></p></p></h3></div>
+						<div id="txt-resume"><p><embed src="SIDERIS-VASILEIOS-CV.pdf" type="application/pdf"   height="600px" width="100%" class="responsive">
+												<center><a href="SIDERIS-VASILEIOS-CV.pdf" download="SIDERIS-VASILEIOS-CV.pdf">Download CV</a></center></p></div>
+						<div id="txt-contact">
+							<div class="form_contact">
+								<form name="contact" method="post" action="/">
+									<div class="row_form">
+										<div class="column_form">
+											<label for="name">Name</label>
+										</div>
+										<div class="column_form">
+											<input type="text" id="name" name="name" required placeholder="Your name..."></input>
+										</div>
+									 </div>
+
+									<div class="row_form">
+										<div class="column_form">
+											<label for="email">Email</label>
+										</div>
+										<div class="column_form">
+											<input type="email" id="email" name="email" required placeholder="Your email..."></input>
+										</div>
+									</div>
+						 
+									<div class="row_form">
+										<div class="column_form">
+											<label for="message">Message</label>
+										</div>
+										<div class="column_form">
+											<textarea id="message" name="message" required placeholder="Enter your message here..." style="height:200px"></textarea>
+										</div>
+									</div>
+									<div class="row_form">
+										<div class="center-submit">
+											<input name="submit" type="submit" value="Submit"></input>
+										</div>
+									</div>
+                                     
+								</form>
+							</div>
+						</div>
+					</section>
+				</div>
+</div>
+  
+
+</div>
+</div>
+<script src="js/default.js"></script>
+
+<?php
+if ($_SERVER['REQUEST_METHOD']=='POST')
+{
+    if (isset($_POST['submit'])) {
+        
+        require 'action/contact.php';
+    }
+ }
+?>
+
+</body>
+</html>

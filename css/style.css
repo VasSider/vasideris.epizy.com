@@ -1,0 +1,276 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding:20px;
+}
+
+body {
+  font-family: "Lucida Sans", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background: url(../images/background.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+ 
+body:after {
+  position:fixed;
+  content:"";
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:rgba(0,0,0,0.5);
+  z-index:-1;
+}
+
+
+.header {
+  color: #ffffff;
+  padding: 20px;
+  margin-left:100px;
+ 
+}
+
+.pop-msg {
+  display:none;
+  margin: auto;
+  color:#fff;
+  width: 350px;
+  background-color: #73AD21;
+  border-radius: 4px;
+  padding: 25px;
+  font-size: 20px;
+  text-align:center;
+}
+
+h2 {
+  font-family:"Courier New", Courier, monospace;
+  color: #8cff66;
+}
+
+
+.pill-nav input{
+  background-color: #eee;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.pill-nav input:hover {
+  background-color: #bbb;
+  color: black;
+}
+
+.pill-nav input.active {
+  background-color: dodgerblue;
+  color: white;
+}
+ 
+input[type=button] {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+} 
+
+.main {
+   border: 2px solid rgba(0,0,0,0.5);
+   background-color: rgba(0,0,0,0.5);
+   color: #ffffff;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+   padding: 20px;
+   border-radius: 25px;
+}
+	
+.aside {
+  background-color: rgba(180,180,180,0.5);
+  border-radius: 25px;
+  padding: 30px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 200px;
+    transition: 0.3s;
+    border: 1px solid #aaa;
+    box-shadow: 0 0 20px -1px black;
+}
+
+.avatar:hover {
+	box-shadow: 0 0 30px -1px black;
+	
+}
+ul {
+  list-style-type: none;
+  margin: 50px 10px 0 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+ul li img {
+  width:60px;
+  height:60px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+*.container {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+
+*.container * {
+   -moz-user-select: text;
+   -khtml-user-select: text;
+   -webkit-user-select: text;
+   -o-user-select: text;
+   user-select: text;
+}
+
+/* For desktop: */
+.col-right {width: 1000px;}
+.col-left {width: 300px;}
+
+input[type=text], input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: rgba(76, 175, 80,0.5);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #54AF50;
+  color: white;
+}
+
+.form_contact {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.column_form {
+  float: left;
+  width: 100%;
+  margin-top: 3px;
+}
+
+.row_form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+.center-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.row_form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  color: #66b3ff;
+  text-decoration: none;
+}
+
+#txt-about-me {
+	text-align: justify;
+	padding:20px;
+}
+
+@media only screen and (max-width: 1500px) {
+  /* For tablets: */
+  [class*="col-right"] {
+    width: 60vw;
+	
+  }
+ 
+.header {
+	text-align: center;
+	margin-left:0px;
+	} 
+embed {
+    display:none;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+  /* For mobile phones: */
+  [class*="col"] {
+    width: 100%;
+	
+  }
+
+.pop-msg {
+    width:70%;
+    }
+.header {
+   text-align: center;
+   margin-left:0px;
+	}
+.pill-nav input{
+   width:100%;
+   padding: 20px;
+    }
+input[type=submit] {
+   width: 100px;
+    }
+
+embed {
+    display:none;
+    }
+}
